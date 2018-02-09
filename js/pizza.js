@@ -16,24 +16,24 @@ var order11821 = {
     crust:thin,
     pizzaSauce: robust marinara,
     cheese: reular
-  };
+  },
 
   toppings: {
-    var veggies = [ 
+    var veggies: [ 
     "olives", 
     "green peppers"]
 
-    meats = [ "pepperoni", 
+    meats: [ "pepperoni", 
     "ham", 
     "sausage"]
-  };
+  },
 
-  sideItems = [ breadsticks, 
+  sideItems: [ breadsticks, 
   bbq wings 6 piece
-  ]
+  ],
   sauces: ranch,
   specialInstructions: please cut into squares,
-  paymentType: cash
+  paymentType: cash,
   storeId: 112,
 };
 
@@ -49,16 +49,16 @@ var order11372 = {
     crust: stuffed crust,
     pizzaSauce: creamy garlic alfredo,
     cheese: double
-}
+  },
   toppings: {
     veggies: onion, anchovies, mushrooms
     meats: chicken, bacon
-  }
+  },
 
   sideItems: double fudge brownie dessert,
-  sauces = [ "bbq", 
+  sauces: [ "bbq", 
   "garlic sauce"
-  ]
+  ],
   specialInstructions: "call 815 at the gate",
   paymentType: credit card,
   storeId: 382
@@ -69,7 +69,7 @@ var order11372 = {
 * currentOrders should be single object containing both orders from above
 */
 var currentOrders = {
-   
+   ders: [order11372, order11821]
 }
   
 /*
@@ -77,3 +77,13 @@ var currentOrders = {
 * Run your file with node pizza.js
 * Console.log(currentOrders) to verify changes have been made
 */
+
+currentOrders.apples[0].Pizza.Sauce = "classic marinara";
+
+currentOrders.apples[0].Toppings.Veggies.push("Spinarch");
+
+currentOrders.apples[0].Toppings.Meats.pop();
+
+currentOrders.apples[0].Others.orderTime = "20 minutes";
+
+console.log(currentOrders.apples[0])
